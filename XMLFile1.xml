@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<test-file>
+  <users>
+    <user>
+      <name>fred</name>
+      <phone>1235551234</phone>
+    </user>
+    <user>
+      <name>john</name>
+      <phone>1235552341</phone>
+    </user>
+    <user>
+      <name>bob</name>
+      <phone>1235553412</phone>
+    </user>
+  </users>  
+</test-file>
