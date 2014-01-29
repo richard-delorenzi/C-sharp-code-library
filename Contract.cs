@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace Richard.Contracts
 {
-    class Contract
+    public class Contract
     {
         /*!
          * \short 
@@ -54,26 +53,26 @@ namespace Richard.Contracts
         }
     }
 
-    class ContractException : Exception
+    public class ContractException : Exception
     {
         public ContractException(string msg, string stack) :
             base(((msg == null) ? "" : msg) + " : " + ((stack==null) ? "" : stack))
         {}
     }
 
-    class PreconditionException : ContractException 
+    public class PreconditionException : ContractException 
     {
         public PreconditionException(string msg, string stack) : base(msg,stack){}
     }
-    class PostconditionException : ContractException 
+    public class PostconditionException : ContractException 
     {
         public PostconditionException(string msg, string stack) : base(msg, stack) { }
     }
-    class InvariantException : ContractException 
+    public class InvariantException : ContractException 
     {
         public InvariantException(string msg, string stack) : base(msg, stack) { }
     }
-    class CheckException : ContractException 
+    public class CheckException : ContractException 
     {
         public CheckException(string msg, string stack) : base(msg, stack) { }
     }
