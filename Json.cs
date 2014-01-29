@@ -9,6 +9,12 @@ namespace Richard.Json
 		{
 			return o==null?null:JObject.FromObject(o).ToString();
 		}
+
+		public static string AsString(this JObject o, string key)
+		{
+			var v = o[key];
+			return (v==null)?null:v.ToString();
+		}
 	}
 }
 
