@@ -7,11 +7,11 @@ namespace Richard.Json
 	{
 		public static string ToJsonString(this object o)
 		{
-			return o==null?null:JObject.FromObject(o).ToString();
+			return (o==null)?null:JObject.FromObject(o).ToString();
 		}
 
 		public static string ToJsonString(this JObject o){
-			return o==null?null:o.ToString();
+			return (o==null)?null:o.ToString();
 		}
 
 		public static string AsString(this JObject o, string key)
