@@ -39,8 +39,8 @@
     <Compile Include="Contract.cs" />
     <Compile Include="Extentions_Logic.cs" />
     <Compile Include="Extentions_Misc.cs" />
-    <Compile Include="Extentions_asString.cs" />
     <Compile Include="Json.cs" />
+    <Compile Include="Extentions_String.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
