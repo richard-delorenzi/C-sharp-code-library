@@ -20,7 +20,7 @@ namespace Richard.String {
 			public bool HadLeader;
 		}
 		public static ReturnedTextWithStripedLeader WithStripedLeaderOf(this string text, string leader) {
-			var startIndex=text.StartsWith(leader)?leader.Length-1:0;
+			var startIndex=text.StartsWith(leader)?leader.Length:0;
 			var name=text.Substring(startIndex);
 			var hasLeader=startIndex>0;
 			return new ReturnedTextWithStripedLeader(name, hasLeader);
