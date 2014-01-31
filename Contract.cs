@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Richard.Contracts
 {
-    public class Contract
+    public static class Contract
     {
         /*!
          * \short 

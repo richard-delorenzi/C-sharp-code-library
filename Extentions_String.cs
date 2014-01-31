@@ -1,7 +1,8 @@
 ﻿using System;
 
-namespace Richard {
-	static partial class ExtensionsString {
+namespace Richard.String {
+
+	public static class ExtensionsString {
 		public static string AsString<T>(this System.Collections.Generic.IEnumerable<T> e) {
 			if (e==null) {
 				return null;
@@ -13,11 +14,17 @@ namespace Richard {
 			return Result;
 		}
 
-		public static Tuple<bool,string> WithStripedLeaderOf(this string text, string leader) {
+		public class ReturnedTextWithStripedLeader{
+			internal ReturnedTextWithStripedLeader(string text, bool hasLeader){Text=text; HadLeader=hasLeader;}
+			public string Text;
+			public bool HadLeader;
+		}
+		public static ReturnedTextWithStripedLeader WithStripedLeaderOf(this string text, string leader) {
 			var startIndex=text.StartsWith(leader)?leader.Length-1:0;
 			var name=text.Substring(startIndex);
 			var hasLeader=startIndex>0;
-			return new Tuple<bool,string>(hasLeader, name);
+			return new ReturnedTextWithStripedLeader(name, hasLeader);
 		}
 	}
+
 }

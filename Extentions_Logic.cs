@@ -1,8 +1,8 @@
 ﻿using Richard.Contracts;
 
-namespace Richard
+namespace Richard.Logic
 {
-    static class LogicExtentions
+    public static class LogicExtentions
     {
         public static bool Implies(this bool a, bool b)
         {
